@@ -30,7 +30,12 @@ h5 {
 
 p {
   font-family: roboto, sans-serif;
-  line-height: 18px;
+  line-height: 1.2em;
+  font-size: 16px;
+}
+
+li {
+  font-size: 14px;
 }
 
 header,
@@ -289,7 +294,7 @@ main {
   position: relative;
   background-image: url("./images/dog.jpg");
   background-size: cover;
-  height: 300px;
+  height: 350px;
 }
 
 .hero article {
@@ -298,7 +303,7 @@ main {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: 0;
-  height: 40%;
+  height: auto;
   width: 100%;
   color: #fff;
   padding: 1em;
@@ -355,6 +360,9 @@ main {
  * Sport Scores
  *
  */
+ .sports-title {
+  padding: 5px 10px;
+ }
 
  .scores-and-weather {
   width: 100%;
@@ -404,6 +412,35 @@ main {
   text-align: center;
 }
 
+@media screen and (max-width: 499px) {
+ table, thead, tbody, th, td, tr {
+          display: block;
+          text-align: left !important;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        td { 
+          position: relative !important;
+          padding: 5px 0 5px 20% !important;
+        }
+        
+        td::before { 
+          position: absolute;
+          left: 6px;
+          content: attr(data-th);
+          font-weight: bold;
+        }
+
+        td:first-of-type {
+          font-weight: bold;
+        }
+}
+
 /*
  *
  * Weather
@@ -411,8 +448,9 @@ main {
  */
 
 .weather {
-  padding: 1em;
+  padding: 2em;
 width: 100%;
+margin: 0;
 }
 
 .weather__location {
@@ -533,7 +571,7 @@ footer a {
 
   .top-news {
     width: 40%;
-    height: 300px;
+    height: 350px;
   }
 
  .weather, .scores {
