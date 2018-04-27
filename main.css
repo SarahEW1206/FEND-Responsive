@@ -129,10 +129,13 @@ margin-right: 1em;
  display: block;
  margin-right: 1em;
 
+
  }
 
  .hamburger-inner {
   float: right;
+   cursor: pointer;
+ padding: 10px;
 
  }
 
@@ -451,6 +454,7 @@ main {
   padding: 2em;
 width: 100%;
 margin: 0;
+order: -1;
 }
 
 .weather__location {
@@ -560,6 +564,9 @@ footer a {
   padding: 1.5em;
 }
 
+
+/*major breakpoints
+*/
 @media screen and (min-width: 650px) {
 
   .header__title {
@@ -603,7 +610,17 @@ footer a {
   .weather {
     order: -1;
   }
+
+
+
   .snippet {
     width: 50%;
   }
   }
+
+/*  Minor breakpoint 
+*/  @media screen and (min-width: 815px) {
+  .top-news__item {
+    font-size: 16px;
+  }
+}
